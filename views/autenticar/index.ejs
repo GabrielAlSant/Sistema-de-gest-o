@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    *{margin:0px; padding:0px}
+    nav{
+        background-color: black;
+        color:white;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+.form{ border: 1px solid black; padding: 15px; width: 600px;}
+
+input{border-radius: 10px;padding: 5px;}
+
+    </style>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <nav>  
+    <h1><%= title %></h1>
+  </nav>
+    <form class="form" method="post" action="/autenticar/validar">
+       <label>Usuario</label>        <input name="user" name="user">
+       <label>Senha</label>          <input name="password" id="password">
+        <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
