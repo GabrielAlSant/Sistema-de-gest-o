@@ -9,21 +9,21 @@
   </head>
   <style>
     .nav-link.active {
-  background-color: #6c757d !important; /* Cinza escuro */
-  color: white !important; /* Garante que o texto permaneça visível */
+  background-color: #6c757d !important;
+  color: white !important; 
 }
 
 .sidebar {
   width: 280px;
   height: 100vh;
-  background-color: #343a40; /* Cor de fundo escura */
+  background-color: #343a40; 
   color: white;
 }
 
 td, th {
-    height: 50px; /* Altura máxima das células */
-    overflow: hidden; /* Oculta conteúdo que ultrapassa a altura */
-    text-align: center; /* Centraliza o texto (opcional) */
+    height: 50px;
+    overflow: hidden; 
+    text-align: center; 
   }
 
   </style>
@@ -36,13 +36,13 @@ td, th {
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link text-white">
+        <a href="/" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
           Home
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="/task" class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
           Tarefas
         </a>
@@ -50,10 +50,10 @@ td, th {
       <br>
       <li>
         <div class="input-group mb-3">
-          <form action="/task/search" method="get"></form>
-          <input type="text" name="products" id="" placeholder="Buscar" class="form-control rounded-start" aria-label="Recipient's username" aria-describedby="basic-addon2">
-          <input  class="input-group-text btn btn-outline-light" type="submit" value="buscar">
-         </form>
+          <form action="/task/search" class="d-flex" method="get">
+            <input type="text" name="task" id="" placeholder="Buscar" class="form-control rounded-start" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input  class="input-group-text btn btn-outline-light" type="submit">
+           </form>
         </div>
       </li>
       <hr>
@@ -61,19 +61,19 @@ td, th {
         <h4>Legenda</h4>
       </li>
       <li>
-        Concluído: 1
+        Concluído
         <br>
         <div class="spinner-grow text-success" role="status" style="animation-duration: 2s;">
         <span class="visually-hidden">Loading...</span>
       </li>
       <li>
-        Em Andamento: 3
+        Em Andamento
         <br>
         <div class="spinner-border text-primary" role="status" >
         <span class="visually-hidden">Loading...</span>
       </li>
       <li>
-       Não Iniciado: 1
+       Não Iniciado
         <br>
         <div class="spinner-grow text-danger" role="status" style="animation-duration: 2s;">
         <span class="visually-hidden">Loading...</span>
@@ -81,25 +81,13 @@ td, th {
     </ul>
    
     <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="data:image/png;base64,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" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong><%= title%></strong>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-      </ul>
-    </div>
+   
   </div>
-
+ 
 <div class="ms-5 mt-2" style="width: 1000px;">
- <strong><h2 class="h1" style="font-weight: bolder;">Tarefas |5| </h2></strong>
+ <strong><h2 class="h1" style="font-weight: bolder;">Tarefas |<%= totalTasks %>| </h2></strong>
  <hr> 
- <table class="table">
+ <table class="table table-striped table-bordered" >
     <thead>
       <tr >
         <th scope="col">Protocolo</th>
@@ -109,58 +97,44 @@ td, th {
       </tr>
     </thead>
     <tbody>
+      
+      <% tasks.forEach(task => { %>
+        <% if (task.status === 2) { %>
       <tr style="height: 50px !important;">
-        <th scope="row">1</th>
-        <td><a  href="/task/task/<%= title %>"><%= title %></a></td>
-        <td>Otto</td>
+        <th scope="row"><%= task.id %></th>
+        <td><a  href="/task/task/<%= task.id %>"><%= task.usuario.nome %></a></td>
+        <td><%= task.nome %></td>
         <td>
           <div class="spinner-border text-primary" role="status" >
           <span class="visually-hidden">Loading...</span>
         </div>
       </td>
       </tr>
+     <% } else if (task.status === 3) { %>
 
       <tr >
-        <th scope="row">2</th>
-        <td><a  href="/task/task/<%= title %>"><%= title %></a></td>
-        <td>Otto</td>
+        <th scope="row"><%= task.id %></th>
+        <td><a  href="/task/task/<%= task.id %>"><%= task.usuario.nome %></a></a></td>
+        <td><%= task.nome %></td>
         <td>
           <div class="spinner-grow text-success" role="status" style="animation-duration: 2s;">
           <span class="visually-hidden">Loading...</span>
         </div>
       </td>
       </tr>
-
+      <% } else if (task.status === 1) { %>
       <tr >
-        <th scope="row">3</th>
-        <td><a  href="/task/task/<%= title %>"><%= title %></a></td>
-        <td>Thornton</td>
-        <td>
-          <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </td>
-      </tr>
-      <tr >
-        <th scope="row">4</th>
-        <td><a  href="/task/task/<%= title %>"><%= title %></a></td>
-        <td>Larry the Bird</td>
-        <td><div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </td>
-      </tr>
-
-      <tr >
-        <th scope="row">5</th>
-        <td><a  href="/task/task/<%= title %>"><%= title %></a></td>
-        <td>Otto</td>
+        <th scope="row"><%= task.id %></th>
+        <td><a  href="/task/task/<%= task.id %>"><%= task.usuario.nome %></a></a></td>
+        <td><%= task.nome %></td>
         <td>
           <div class="spinner-grow text-danger" role="status" style="animation-duration: 2s;">
           <span class="visually-hidden">Loading...</span>
         </div>
       </td>
       </tr>
+      <% } %>
+      <% }); %>
 
     </tbody>
   </table>

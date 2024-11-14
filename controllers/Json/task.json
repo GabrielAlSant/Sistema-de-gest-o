@@ -1,0 +1,106 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "usuario": "Gabriel",
+        "senha": "1234",
+        "tarefas": [
+          {
+            "id": 101,
+            "usuario": {
+              "id": 1,
+              "nome": "Gabriel"
+            },
+            "nome": "Finalizar relatório",
+            "descricao": "Finalizar o relatório mensal de vendas.",
+            "status": 2
+          },
+          {
+            "id": 102,
+            "usuario": {
+              "id": 1,
+              "nome": "Gabriel"
+            },
+            "nome": "Revisar código",
+            "descricao": "Revisar o código do projeto TCC.",
+            "status": 1
+          },
+          {
+            "id": 103,
+            "usuario": {
+              "id": 1,
+              "nome": "Gabriel"
+            },
+            "nome": "Enviar e-mail",
+            "descricao": "Enviar o e-mail para o suporte técnico.",
+            "status": 3
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "usuario": "Maria",
+        "senha": "1234",
+        "tarefas": [
+          {
+            "id": 201,
+            "usuario": {
+              "id": 2,
+              "nome": "Maria Silva"
+            },
+            "nome": "Planejar reunião",
+            "descricao": "Criar pauta para a reunião de equipe.",
+            "status": 2
+          },
+          {
+            "id": 202,
+            "usuario": {
+              "id": 2,
+              "nome": "Maria Silva"
+            },
+            "nome": "Atualizar sistema",
+            "descricao": "Realizar a atualização do software interno.",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "usuario": "João",
+        "senha": "1234",
+        "tarefas": [
+          {
+            "id": 301,
+            "usuario": {
+              "id": 3,
+              "nome": "João Ferreira"
+            },
+            "nome": "Responder cliente",
+            "descricao": "Enviar respostas ao cliente sobre dúvidas técnicas.",
+            "status": 1
+          },
+          {
+            "id": 302,
+            "usuario": {
+              "id": 3,
+              "nome": "João Ferreira"
+            },
+            "nome": "Organizar documentos",
+            "descricao": "Separar e organizar documentos financeiros.",
+            "status": 3
+          },
+          {
+            "id": 303,
+            "usuario": {
+              "id": 3,
+              "nome": "João Ferreira"
+            },
+            "nome": "Agendar manutenção",
+            "descricao": "Agendar manutenção preventiva para os equipamentos.",
+            "status": 2
+          }
+        ]
+      }
+    ]
+  }
+  
